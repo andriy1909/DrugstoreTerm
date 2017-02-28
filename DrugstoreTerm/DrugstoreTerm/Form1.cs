@@ -13,6 +13,7 @@ namespace DrugstoreTerm
 {
     public partial class Form1 : Form
     {
+        //КП 3.11 ПР-132.NN ПЗ(ВП, Д1)
         static string connectString = @"Data Source=.\SQLEXPRESS; Initial Catalog = Drugstore; uid=sa; Integrated Security=SSPI;";
         public Form1()
         {
@@ -21,8 +22,11 @@ namespace DrugstoreTerm
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             // TODO: данная строка кода позволяет загрузить данные в таблицу "drugstoreDataSet.Товари". При необходимости она может быть перемещена или удалена.
             this.товариTableAdapter.Fill(this.drugstoreDataSet.Товари);
+
+            // Робота з menuStrip1
 
             SqlConnection bd = new SqlConnection(connectString);
             bd.Open();
@@ -45,8 +49,51 @@ namespace DrugstoreTerm
                 }
             }        
             bd.Close();
-        }
 
+            // Робота з Item
+
+            panel1.Parent = this;
+
+
+            SqlConnection bd1 = new SqlConnection(connectString);
+            bd1.Open();
+
+            SqlCommand cmd1 = new SqlCommand("Select Код, Товари.Назва, Ціна, Категорії.Назва From Товари, Категорії Where Код = ID ", bd1);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            int k = 0;
+            for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
+            {
+              //  if (dt1.Rows[nMa][1].ToString() == "0")
+              //  {
+              //      ++nMa;
+              //  }
+              //  else
+              //  {
+                    Item it = new Item();
+                    //if(k != 0)
+                    //{
+                        it.Left = 50;
+                    //}
+                    it.Parent = panel1;
+                    it.Show();
+                    it.IName = dt1.Rows[nMa][1].ToString();
+                    it.ICategory = dt1.Rows[nMa][3].ToString();
+                    it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+
+
+               // }
+            }
+
+            bd1.Close();
+
+
+
+
+
+        }
       
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -54,6 +101,11 @@ namespace DrugstoreTerm
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
