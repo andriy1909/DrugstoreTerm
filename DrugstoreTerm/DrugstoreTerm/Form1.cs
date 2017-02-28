@@ -63,36 +63,46 @@ namespace DrugstoreTerm
             DataTable dt1 = new DataTable();
             adapter1.Fill(dt1);
 
-            int k = 0;
+            int kr = 0;
+            int kl = 0;
             for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
             {
-              //  if (dt1.Rows[nMa][1].ToString() == "0")
-              //  {
-              //      ++nMa;
-              //  }
-              //  else
-              //  {
+
+                if (dt1.Rows[nMa][1].ToString() == "0")
+                {
+                    ++nMa;
+                }
+                else
+                {
                     Item it = new Item();
-                    //if(k != 0)
-                    //{
-                        it.Left = 50;
-                    //}
-                    it.Parent = panel1;
-                    it.Show();
-                    it.IName = dt1.Rows[nMa][1].ToString();
-                    it.ICategory = dt1.Rows[nMa][3].ToString();
-                    it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
 
-
-               // }
+                    if (panel1.Width < (kr+1) * 351)
+                    {
+                        kr = 0;
+                        it.Left = 351 * kr;
+                        it.Top = 130;
+                        kl = kl + 130;
+                        it.Parent = panel1;
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][3].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.Show();
+                       
+                    }
+                    else
+                    {
+                        it.Left = 351 * kr;
+                        it.Top = kl;
+                        it.Parent = panel1;
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][3].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.Show();
+                        kr++;
+                    }
+                }
             }
-
             bd1.Close();
-
-
-
-
-
         }
       
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

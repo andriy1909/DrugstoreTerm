@@ -44,22 +44,21 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(278, 9);
+            this.label1.Location = new System.Drawing.Point(109, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 15);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ціна:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbText
             // 
-            this.tbText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbText.Location = new System.Drawing.Point(109, 45);
+            this.tbText.Location = new System.Drawing.Point(109, 57);
             this.tbText.Multiline = true;
             this.tbText.Name = "tbText";
             this.tbText.ReadOnly = true;
-            this.tbText.Size = new System.Drawing.Size(277, 66);
+            this.tbText.Size = new System.Drawing.Size(228, 66);
             this.tbText.TabIndex = 4;
             // 
             // label2
@@ -67,7 +66,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(359, 11);
+            this.label2.Location = new System.Drawing.Point(180, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 6;
@@ -78,7 +77,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Location = new System.Drawing.Point(4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(99, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(99, 120);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -88,7 +87,7 @@
             this.Iname.AutoSize = true;
             this.Iname.BackColor = System.Drawing.Color.Transparent;
             this.Iname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Iname.Location = new System.Drawing.Point(119, 9);
+            this.Iname.Location = new System.Drawing.Point(109, 3);
             this.Iname.Name = "Iname";
             this.Iname.Size = new System.Drawing.Size(43, 15);
             this.Iname.TabIndex = 7;
@@ -100,7 +99,7 @@
             this.Icategoty.AutoSize = true;
             this.Icategoty.BackColor = System.Drawing.Color.Transparent;
             this.Icategoty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Icategoty.Location = new System.Drawing.Point(119, 27);
+            this.Icategoty.Location = new System.Drawing.Point(109, 18);
             this.Icategoty.Name = "Icategoty";
             this.Icategoty.Size = new System.Drawing.Size(65, 15);
             this.Icategoty.TabIndex = 8;
@@ -112,7 +111,7 @@
             this.Iprice.AutoSize = true;
             this.Iprice.BackColor = System.Drawing.Color.Transparent;
             this.Iprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Iprice.Location = new System.Drawing.Point(322, 11);
+            this.Iprice.Location = new System.Drawing.Point(143, 39);
             this.Iprice.Name = "Iprice";
             this.Iprice.Size = new System.Drawing.Size(31, 15);
             this.Iprice.TabIndex = 9;
@@ -130,7 +129,7 @@
             this.Controls.Add(this.tbText);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Item";
-            this.Size = new System.Drawing.Size(396, 121);
+            this.Size = new System.Drawing.Size(351, 130);
             this.Load += new System.EventHandler(this.Item_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
