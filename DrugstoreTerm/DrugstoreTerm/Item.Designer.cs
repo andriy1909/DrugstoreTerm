@@ -54,6 +54,7 @@
             // tbText
             // 
             this.tbText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbText.Enabled = false;
             this.tbText.Location = new System.Drawing.Point(109, 57);
             this.tbText.Multiline = true;
             this.tbText.Name = "tbText";
@@ -131,6 +132,7 @@
             this.Name = "Item";
             this.Size = new System.Drawing.Size(351, 130);
             this.Load += new System.EventHandler(this.Item_Load);
+            this.Click += new System.EventHandler(this.Item_Click);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
