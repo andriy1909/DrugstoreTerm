@@ -26,8 +26,6 @@ namespace DrugstoreTerm
 
             tbName.Text = det.name;
 
-            cbOdVum.Text = det.odVum.ToString();
-
             cbProducer.DisplayMember = det.maker.ToString();
             cbProducer.Text = Producers.getName(det.maker);
 
@@ -39,12 +37,18 @@ namespace DrugstoreTerm
             pictureBox1.Image = det.getImage();
             cbReturn.Checked = det.isReturn;
             checkBox1.Checked = det.recept;
-           // cbAnalog.Text = Convert.ToString(det.analog);
         }
 
         private void cbOdVum_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void DetailsForm_Leave(object sender, EventArgs e)
+        {
+           // MessageBox.Show("sdfghghj");
+            if (!DetailsForm.ActiveForm.Focused)
+                this.Activate();
         }
     }
 }

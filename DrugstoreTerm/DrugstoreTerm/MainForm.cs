@@ -134,9 +134,11 @@ namespace DrugstoreTerm
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+            toolStripTextBox1.Text = "";
 
             panel1.Parent = this;
             panel1.Controls.Clear();
+
             SqlConnection bd2 = new SqlConnection(connectString);
             bd2.Open();
             SqlCommand cmd2 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID AND Категорії.Назва = '" + e.ClickedItem.Text.Trim()+"'", bd2);
@@ -190,7 +192,6 @@ namespace DrugstoreTerm
                 }
             }
             bd2.Close();
-           
         }
 
         private void пошукToolStripMenuItem_Click(object sender, EventArgs e)
@@ -255,8 +256,10 @@ namespace DrugstoreTerm
 
         private void всіТовариToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            panel1.Parent = this;
+            toolStripTextBox1.Text = "";
 
+            panel1.Parent = this;
+            panel1.Controls.Clear();
 
             SqlConnection bd1 = new SqlConnection(connectString);
             bd1.Open();

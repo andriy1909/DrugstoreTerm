@@ -103,13 +103,43 @@ namespace DrugstoreTerm
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            OnClick(e);
         }
 
         private void Item_Click(object sender, EventArgs e)
         {
             DetailsForm DT = new DetailsForm(id);
-            DT.Show();
+            DT.ShowDialog();
+        }
+
+        private void Iname_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void Icategoty_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void Iprice_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void tbText_TextChanged(object sender, EventArgs e)
+        {
+            OnClick(e);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OnClick(e);
         }
     }
 }

@@ -61,6 +61,7 @@
             this.tbText.ReadOnly = true;
             this.tbText.Size = new System.Drawing.Size(228, 66);
             this.tbText.TabIndex = 4;
+            this.tbText.TextChanged += new System.EventHandler(this.tbText_TextChanged);
             // 
             // label2
             // 
@@ -72,6 +73,7 @@
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "грн.";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -81,6 +83,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(99, 120);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Iname
             // 
@@ -93,6 +96,7 @@
             this.Iname.Size = new System.Drawing.Size(43, 15);
             this.Iname.TabIndex = 7;
             this.Iname.Text = "Назва";
+            this.Iname.Click += new System.EventHandler(this.Iname_Click);
             // 
             // Icategoty
             // 
@@ -105,6 +109,7 @@
             this.Icategoty.Size = new System.Drawing.Size(65, 15);
             this.Icategoty.TabIndex = 8;
             this.Icategoty.Text = "Категорія";
+            this.Icategoty.Click += new System.EventHandler(this.Icategoty_Click);
             // 
             // Iprice
             // 
@@ -117,6 +122,7 @@
             this.Iprice.Size = new System.Drawing.Size(31, 15);
             this.Iprice.TabIndex = 9;
             this.Iprice.Text = "0.00";
+            this.Iprice.Click += new System.EventHandler(this.Iprice_Click);
             // 
             // Item
             // 

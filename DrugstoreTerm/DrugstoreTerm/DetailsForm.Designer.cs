@@ -32,17 +32,13 @@
             this.tbInform = new System.Windows.Forms.TextBox();
             this.tbOutPrice = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.cbOdVum = new System.Windows.Forms.ComboBox();
-            this.cbAnalog = new System.Windows.Forms.ComboBox();
             this.cbPack = new System.Windows.Forms.ComboBox();
             this.cbProducer = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.cbReturn = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,69 +57,48 @@
             this.tbInform.Location = new System.Drawing.Point(11, 168);
             this.tbInform.Multiline = true;
             this.tbInform.Name = "tbInform";
-            this.tbInform.Size = new System.Drawing.Size(551, 110);
+            this.tbInform.ReadOnly = true;
+            this.tbInform.Size = new System.Drawing.Size(485, 110);
             this.tbInform.TabIndex = 11;
             // 
             // tbOutPrice
             // 
-            this.tbOutPrice.Location = new System.Drawing.Point(228, 142);
+            this.tbOutPrice.Location = new System.Drawing.Point(231, 115);
             this.tbOutPrice.Name = "tbOutPrice";
             this.tbOutPrice.ReadOnly = true;
-            this.tbOutPrice.Size = new System.Drawing.Size(185, 20);
+            this.tbOutPrice.Size = new System.Drawing.Size(125, 20);
             this.tbOutPrice.TabIndex = 14;
             this.tbOutPrice.Text = "0";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(168, 145);
+            this.label15.Location = new System.Drawing.Point(171, 118);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 13);
             this.label15.TabIndex = 13;
             this.label15.Text = "Відп. ціна";
             // 
-            // cbOdVum
-            // 
-            this.cbOdVum.FormattingEnabled = true;
-            this.cbOdVum.Items.AddRange(new object[] {
-            "упковка",
-            "ампула",
-            "порошок"});
-            this.cbOdVum.Location = new System.Drawing.Point(257, 35);
-            this.cbOdVum.Name = "cbOdVum";
-            this.cbOdVum.Size = new System.Drawing.Size(120, 21);
-            this.cbOdVum.TabIndex = 29;
-            this.cbOdVum.SelectedIndexChanged += new System.EventHandler(this.cbOdVum_SelectedIndexChanged);
-            // 
-            // cbAnalog
-            // 
-            this.cbAnalog.DisplayMember = "Назва";
-            this.cbAnalog.FormattingEnabled = true;
-            this.cbAnalog.Location = new System.Drawing.Point(297, 115);
-            this.cbAnalog.Name = "cbAnalog";
-            this.cbAnalog.Size = new System.Drawing.Size(116, 21);
-            this.cbAnalog.TabIndex = 27;
-            this.cbAnalog.ValueMember = "Код";
-            this.cbAnalog.Visible = false;
-            // 
             // cbPack
             // 
             this.cbPack.DisplayMember = "Назва";
+            this.cbPack.Enabled = false;
             this.cbPack.FormattingEnabled = true;
             this.cbPack.Location = new System.Drawing.Point(231, 88);
             this.cbPack.Name = "cbPack";
-            this.cbPack.Size = new System.Drawing.Size(182, 21);
+            this.cbPack.Size = new System.Drawing.Size(145, 21);
             this.cbPack.TabIndex = 28;
             this.cbPack.ValueMember = "Код";
             // 
             // cbProducer
             // 
             this.cbProducer.DisplayMember = "Назва";
+            this.cbProducer.Enabled = false;
             this.cbProducer.FormattingEnabled = true;
             this.cbProducer.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbProducer.Location = new System.Drawing.Point(445, 35);
+            this.cbProducer.Location = new System.Drawing.Point(231, 35);
             this.cbProducer.Name = "cbProducer";
-            this.cbProducer.Size = new System.Drawing.Size(117, 21);
+            this.cbProducer.Size = new System.Drawing.Size(157, 21);
             this.cbProducer.TabIndex = 26;
             this.cbProducer.ValueMember = "Код";
             // 
@@ -142,7 +117,7 @@
             this.tbName.MaxLength = 50;
             this.tbName.Name = "tbName";
             this.tbName.ReadOnly = true;
-            this.tbName.Size = new System.Drawing.Size(305, 20);
+            this.tbName.Size = new System.Drawing.Size(239, 20);
             this.tbName.TabIndex = 21;
             // 
             // checkBox1
@@ -167,15 +142,6 @@
             this.cbReturn.Text = "Можливість повернення";
             this.cbReturn.UseVisualStyleBackColor = true;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(168, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 13);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "Одиниці виміру";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -185,20 +151,10 @@
             this.label3.TabIndex = 19;
             this.label3.Text = "Назва товара";
             // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(168, 118);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(123, 13);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "Аналог для препарата:";
-            this.label13.Visible = false;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(383, 38);
+            this.label9.Location = new System.Drawing.Point(169, 38);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 20;
@@ -208,18 +164,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 286);
-            this.Controls.Add(this.cbOdVum);
-            this.Controls.Add(this.cbAnalog);
+            this.ClientSize = new System.Drawing.Size(504, 286);
             this.Controls.Add(this.cbPack);
             this.Controls.Add(this.cbProducer);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cbReturn);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbOutPrice);
             this.Controls.Add(this.label15);
@@ -227,7 +179,9 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "DetailsForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Детальний перегляд";
+            this.Leave += new System.EventHandler(this.DetailsForm_Leave);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -240,17 +194,13 @@
         private System.Windows.Forms.TextBox tbInform;
         private System.Windows.Forms.TextBox tbOutPrice;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.ComboBox cbOdVum;
-        private System.Windows.Forms.ComboBox cbAnalog;
         private System.Windows.Forms.ComboBox cbPack;
         private System.Windows.Forms.ComboBox cbProducer;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox cbReturn;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
     }
 }
