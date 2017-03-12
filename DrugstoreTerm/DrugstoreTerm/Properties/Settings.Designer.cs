@@ -26,8 +26,7 @@ namespace DrugstoreTerm.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-UFRC700\\SQLEXPRESS;Initial Catalog=Drugstore;Integrated Secur" +
-            "ity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=Drugstore;Integrated Security=True")]
         public string DrugstoreConnectionString {
             get {
                 return ((string)(this["DrugstoreConnectionString"]));

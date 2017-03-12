@@ -204,7 +204,7 @@ namespace DrugstoreTerm
                 panel1.Controls.Clear();
                 SqlConnection bd2 = new SqlConnection(connectString);
                 bd2.Open();
-                SqlCommand cmd2 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID AND Товари.Назва = '" + toolStripTextBox1.Text.Trim() + "'", bd2);
+                SqlCommand cmd2 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID AND Товари.Назва like '%" + toolStripTextBox1.Text.Trim() + "%'", bd2);
                 SqlDataAdapter adapter1 = new SqlDataAdapter(cmd2);
                 DataTable dt2 = new DataTable();
                 adapter1.Fill(dt2);
