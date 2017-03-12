@@ -320,12 +320,259 @@ namespace DrugstoreTerm
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
+            toolStripTextBox1.Text = "";
 
+            panel1.Parent = this;
+            panel1.Controls.Clear();
+
+            SqlConnection bd1 = new SqlConnection(connectString);
+            bd1.Open();
+
+            SqlCommand cmd1 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID order by Ціна desc", bd1);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            int kr = 0;
+            int kl = 0;
+            for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
+            {
+
+                if (dt1.Rows[nMa][1].ToString() == "0")
+                {
+                    ++nMa;
+                }
+                else
+                {
+                    Item it = new Item();
+
+                    if (panel1.Width < (kr + 1) * 351)
+                    {
+                        kr = 0;
+                        it.Left = 351 * kr;
+                        it.Top = 130;
+                        kl = kl + 130;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+
+                    }
+                    else
+                    {
+                        it.Left = 351 * kr;
+                        it.Top = kl;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+                        kr++;
+                    }
+                }
+            }
+            bd1.Close();
         }
 
         private void проПрограмуToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            toolStripTextBox1.Text = "";
+
+            panel1.Parent = this;
+            panel1.Controls.Clear();
+
+            SqlConnection bd1 = new SqlConnection(connectString);
+            bd1.Open();
+
+            SqlCommand cmd1 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID order by Ціна asc", bd1);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            int kr = 0;
+            int kl = 0;
+            for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
+            {
+
+                if (dt1.Rows[nMa][1].ToString() == "0")
+                {
+                    ++nMa;
+                }
+                else
+                {
+                    Item it = new Item();
+
+                    if (panel1.Width < (kr + 1) * 351)
+                    {
+                        kr = 0;
+                        it.Left = 351 * kr;
+                        it.Top = 130;
+                        kl = kl + 130;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+
+                    }
+                    else
+                    {
+                        it.Left = 351 * kr;
+                        it.Top = kl;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+                        kr++;
+                    }
+                }
+            }
+            bd1.Close();
+        }
+
+        private void toolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            toolStripTextBox1.Text = "";
+
+            panel1.Parent = this;
+            panel1.Controls.Clear();
+
+            SqlConnection bd1 = new SqlConnection(connectString);
+            bd1.Open();
+
+            SqlCommand cmd1 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID order by Товари.Назва desc", bd1);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            int kr = 0;
+            int kl = 0;
+            for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
+            {
+
+                if (dt1.Rows[nMa][1].ToString() == "0")
+                {
+                    ++nMa;
+                }
+                else
+                {
+                    Item it = new Item();
+
+                    if (panel1.Width < (kr + 1) * 351)
+                    {
+                        kr = 0;
+                        it.Left = 351 * kr;
+                        it.Top = 130;
+                        kl = kl + 130;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+
+                    }
+                    else
+                    {
+                        it.Left = 351 * kr;
+                        it.Top = kl;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+                        kr++;
+                    }
+                }
+            }
+            bd1.Close();
+        }
+
+        private void toolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            toolStripTextBox1.Text = "";
+
+            panel1.Parent = this;
+            panel1.Controls.Clear();
+
+            SqlConnection bd1 = new SqlConnection(connectString);
+            bd1.Open();
+
+            SqlCommand cmd1 = new SqlCommand("Select Код, Товари.Назва, Ціна, Фото, Категорії.Назва From Товари, Категорії Where Код = ID order by Товари.Назва asc", bd1);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(cmd1);
+            DataTable dt1 = new DataTable();
+            adapter1.Fill(dt1);
+
+            int kr = 0;
+            int kl = 0;
+            for (int nMa = 0; nMa < dt1.Rows.Count; nMa++)
+            {
+
+                if (dt1.Rows[nMa][1].ToString() == "0")
+                {
+                    ++nMa;
+                }
+                else
+                {
+                    Item it = new Item();
+
+                    if (panel1.Width < (kr + 1) * 351)
+                    {
+                        kr = 0;
+                        it.Left = 351 * kr;
+                        it.Top = 130;
+                        kl = kl + 130;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+
+                    }
+                    else
+                    {
+                        it.Left = 351 * kr;
+                        it.Top = kl;
+                        it.Parent = panel1;
+                        it.Iid = (Int32)dt1.Rows[nMa][0];
+                        it.IName = dt1.Rows[nMa][1].ToString();
+                        it.ICategory = dt1.Rows[nMa][4].ToString();
+                        it.IPrice = dt1.Rows[nMa]["Ціна"].ToString();
+                        it.image = (byte[])dt1.Rows[nMa]["Фото"];
+                        it.getImage((byte[])dt1.Rows[nMa]["Фото"]);
+                        it.Show();
+                        kr++;
+                    }
+                }
+            }
+            bd1.Close();
         }
     }
 }

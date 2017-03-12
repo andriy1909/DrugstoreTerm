@@ -63,7 +63,7 @@
             this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(98, 482);
+            this.menuStrip1.Size = new System.Drawing.Size(6, 482);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -73,9 +73,9 @@
             this.statusStrip1.BackColor = System.Drawing.Color.Tomato;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(98, 487);
+            this.statusStrip1.Location = new System.Drawing.Point(6, 487);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(674, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(766, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -119,21 +119,22 @@
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
             this.поЦініToolStripMenuItem.Name = "поЦініToolStripMenuItem";
-            this.поЦініToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.поЦініToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.поЦініToolStripMenuItem.Text = "По ціні";
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(84, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem3.Text = "▼";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(84, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem4.Text = "▲";
+            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // поНазвіToolStripMenuItem
             // 
@@ -141,20 +142,22 @@
             this.toolStripMenuItem5,
             this.toolStripMenuItem6});
             this.поНазвіToolStripMenuItem.Name = "поНазвіToolStripMenuItem";
-            this.поНазвіToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.поНазвіToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.поНазвіToolStripMenuItem.Text = "По назві";
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(84, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem5.Text = "▼";
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(84, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(152, 22);
             this.toolStripMenuItem6.Text = "▲";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // пошукToolStripMenuItem
             // 
@@ -203,9 +206,9 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(98, 27);
+            this.panel1.Location = new System.Drawing.Point(6, 27);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 460);
+            this.panel1.Size = new System.Drawing.Size(766, 460);
             this.panel1.TabIndex = 4;
             // 
             // MainForm
